@@ -1,12 +1,11 @@
 **Notes**
-* This is a quickly put together Android app to show the Path of Lowest Cost solver in action.  It is missing many things that I would add to a real app, including.
-** No tests, but I do have an example of tests that I've done for other apps, including this one https://github.com/ericmaxwell2003/roboguiceRealmNaeNae/tree/feature/roboguiceIntegration/app/src/androidTest/java/software/credible/naenaelistapp.  I used this example when I presented at CodeMash, Self Conference, and AnDevCon.
-** It works only well in portrait.
-** I haven't spent any time extracting styles from the main layout file into the styles file.
-** The UI is somewhat no frills.
+* This is a quickly put together Android app to show the Path of Lowest Cost solver in action.  It is missing many things that I would add to a real app, including:
+* It works only well in portrait.
+* I haven't spent any time extracting styles from the main layout file into the styles file.
+* The UI is somewhat no frills.
 
 * What it does hopefully show is that I know Android and can whip up something simple in an hour or so.
-
+* I do have an example of tests that I've done for other apps, see below.
 
 
 **Other Projects/Work I want to note are**
