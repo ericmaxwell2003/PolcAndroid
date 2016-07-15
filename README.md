@@ -6,11 +6,7 @@
 * You can now enter up to 10 rows of data.
 
 **Examples**
-![Example One](Example%20One.png)
-
-![Example Two](Example%20Two.png)
-
-![Example Three](Example%20Three.png)
+![Example One](Example%20One.png)![Example Two](Example%20Two.png)[Example Three](Example%20Three.png)
 
 ["Example Three.png"]
 
