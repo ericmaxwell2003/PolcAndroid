@@ -74,7 +74,7 @@ public class Solution implements Comparable<Solution> {
             return -1;
         }
 
-        int isValid = Boolean.compare(isValid(), o.isValid());
+        int isValid = Boolean.compare(o.isValid(), isValid());
         if(isValid != 0) {
             return isValid;
         }

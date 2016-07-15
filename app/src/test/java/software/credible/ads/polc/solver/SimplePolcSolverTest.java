@@ -21,6 +21,22 @@ public class SimplePolcSolverTest {
     }
 
     @Test
+    public void whenFindPathOfLowestCostOn4x5GridWithYesAndNosPresentThenChooseCorrectly() throws Exception {
+
+        Grid grid = givenGridWithRows(
+                new Row(3, 4, 5, 6, 7),
+                new Row(55, 6, 7, 78, 8),
+                new Row(5, 5, 6, 8, 4),
+                new Row(1, 2, 3, 4, 5) );
+
+        Solution solution = simplePolcSolver.findPathOfLowestCost(grid);
+
+        assertEquals("Yes", solution.didMakeItThroughGrid());
+        assertEquals(14, solution.getTotalCost());
+        assertEquals(Arrays.asList(4,4,4,4,3), solution.getPath());
+    }
+
+    @Test
     public void whenFindPathOfLowestCostOn5x6GridThenChooseCorrectly() throws Exception {
 
         Grid grid = givenGridWithRows( new Row(3, 4, 1, 2, 8, 6),
