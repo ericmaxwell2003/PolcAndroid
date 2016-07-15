@@ -7,11 +7,11 @@
 
 **Examples**
 
-<img src="Example%20One.png" alt="Example One"/>
+<img width="463" height="844" src="Example%20One.png" alt="Example One"/>
 
-<img src="Example%20Two.png" alt="Example Two"/>
+<img width="463" height="844"  src="Example%20Two.png" alt="Example Two"/>
 
-<img src="Example%20Three.png" alt="Example Three"/>
+<img width="463" height="844"  src="Example%20Three.png" alt="Example Three"/>
 
 
 **Other Projects/Work I want to note are**
