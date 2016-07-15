@@ -1,5 +1,13 @@
 **Run Unit Tests and Build APK File**
-./gradlw clean build
+```
+./gradlew clean build
+```
+
+**Output will be in:**
+
+```
+./app/build/outputs/apk/app-debug.apk
+```
 
 **Change Notes**
 * Made 1 Text area that is multi line.  (i.e. Enter 5..100 comma separated digits, then hit return for each subsequent row).
