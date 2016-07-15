@@ -6,11 +6,12 @@
 * You can now enter up to 10 rows of data.
 
 **Examples**
-![Example One](Example%20One.png =250x)
+<img src="Example%20One.png" alt="Example One" style="width: 200px;"/>
 
-![Example Two](Example%20Two.png =250x)
+<img src="Example%20Two.png" alt="Example Two" style="width: 200px;"/>
 
-![Example Three](Example%20Three.png =250x)
+<img src="Example%20Three.png" alt="Example Three" style="width: 200px;"/>
+
 
 **Other Projects/Work I want to note are**
 
