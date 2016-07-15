@@ -9,11 +9,11 @@
 
 <img width="463" height="844" src="Example%20One.png" alt="Example One"/>
 
-<img width="463" height="844"  src="Example%20Two.png" alt="Example Two"/>
+<img width="463" height="844" src="Example%20Two.png" alt="Example Two"/>
 
-<img width="463" height="844"  src="Example%20Three.png" alt="Example Three"/>
+<img width="463" height="844" src="Example%20Three.png" alt="Example Three"/>
 
-<img width="463" height="844"  src="Ten%20Row%20Example.png" alt="Example Ten Rows"/>
+<img width="463" height="844" src="Ten%20Row%20Example.png" alt="Example Ten Rows"/>
 
 
 **Other Projects/Work I want to note are**
