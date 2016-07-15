@@ -24,20 +24,29 @@ public class SimplePolcSolver implements PolcSolver {
 
     private void crawlGrid(int currRow, int currCol, Grid grid, Solution possibleSolution, TreeSet<Solution> solutions) {
 
-        if(possibleSolution.isValid()) {
+        if (weHaveMadeItThrough(currCol, grid)) {
+            solutions.add(possibleSolution);
 
-            if (weHaveMadeItThrough(currCol, grid)) {
+        } else {
+
+            int nextPathElement = grid.reducedRowIdxFor(currRow) + 1;
+            int nextPathElementCost = grid.valueAt(currRow, currCol);
+            possibleSolution.addPathElement(nextPathElement, nextPathElementCost);
+
+            if(itsTimeToGiveUp(possibleSolution)) {
                 solutions.add(possibleSolution);
 
             } else {
-                possibleSolution.addPathElement(grid.valueAt(currRow, currCol));
-
                 crawlGrid(currRow + 1, currCol + 1, grid, possibleSolution.copy(), solutions);
                 crawlGrid(currRow    , currCol + 1, grid, possibleSolution.copy(), solutions);
                 crawlGrid(currRow - 1, currCol + 1, grid, possibleSolution.copy(), solutions);
             }
 
         }
+    }
+
+    private boolean itsTimeToGiveUp(Solution s) {
+        return !s.isValid();
     }
 
     private boolean weHaveMadeItThrough(int col, Grid grid) {

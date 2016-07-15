@@ -23,13 +23,14 @@ import software.credible.ui.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    private PolcSolver solver;
-    private int [] gridRowIds = {R.id.gridRow1, R.id.gridRow2, R.id.gridRow3, R.id.gridRow4, R.id.gridRow5 };
+    private static final String TAG = MainActivity.class.getName();
 
+    private PolcSolver solver;
+
+    private TextView grid;
     private TextView solutionValid;
     private TextView solutionCost;
     private TextView solutionPath;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         solver = new SimplePolcSolver();
 
+        grid = (EditText) findViewById(R.id.grid);
         solutionValid = (TextView) findViewById(R.id.solutionValid);
         solutionCost = (TextView) findViewById(R.id.solutionCost);
         solutionPath = (TextView) findViewById(R.id.solutionPath);
@@ -59,46 +61,23 @@ public class MainActivity extends AppCompatActivity {
         solutionValid.setText("");
         solutionCost.setText(String.valueOf(0));
         solutionPath.setText("[]");
-        for(int gridRowId : gridRowIds) {
-            ((EditText)findViewById(gridRowId)).setText("");
-        }
+        grid.setText("");
     }
 
     private void updateUiWithSolution(Solution solution) {
-        solutionValid.setText(String.valueOf(solution.isValid()));
-        solutionCost.setText(String.valueOf(solution.calculateTotalCost()));
+        solutionValid.setText(solution.didMakeItThroughGrid());
+        solutionCost.setText(String.valueOf(solution.getTotalCost()));
         solutionPath.setText(Arrays.toString(solution.getPath().toArray()));
     }
 
     private Grid captureGridFromUi() {
-        List<Row> rowsInGrid = new ArrayList<>();
-        for(int gridRowId : gridRowIds) {
-            Row rowEntry = getRow(gridRowId);
-            if(rowEntry != null) {
-                rowsInGrid.add(rowEntry);
-            } else {
-                break;
-            }
+        try {
+            String gridData = grid.getText().toString().replaceAll("\\n",";").replaceAll("\\s","");
+            return (gridData.isEmpty()) ? null : new Grid(gridData);
+        } catch (Exception e) {
+            Log.e(TAG, e.getMessage());
+            return null;
         }
-        return (rowsInGrid.isEmpty()) ? null : new Grid(rowsInGrid.toArray(new Row[1]));
-    }
-
-    private Row getRow(int resId) {
-        int[] rowData = null;
-        EditText editText = (EditText) findViewById(resId);
-        if(editText != null && !TextUtils.isEmpty(editText.getText())) {
-            String rowDataStr = editText.getText().toString();
-            String [] rowDataArr = rowDataStr.split(",");
-            rowData = new int[rowDataArr.length];
-            for(int i = 0; i < rowDataArr.length; i++) {
-                try {
-                    rowData[i] = Integer.parseInt(rowDataArr[i].trim());
-                } catch (NumberFormatException e) {
-                    toast("Bad Grid Data Found");
-                }
-            }
-        }
-        return (rowData == null) ? null : new Row(rowData);
     }
 
     private void toast(String message) {

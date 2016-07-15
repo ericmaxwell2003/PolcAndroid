@@ -48,14 +48,16 @@ public class Grid {
         return getRows().length;
     }
 
-    public int valueAt(int row, int col) {
-
+    public int reducedRowIdxFor(int row) {
         row = row % size();
         if(row < 0) {
             row = size() + row;
         }
+        return row % size();
+    }
 
-        return getRows()[row % size()].getCols()[col];
+    public int valueAt(int row, int col) {
+        return getRows()[reducedRowIdxFor(row)].getCols()[col];
     }
 
     private boolean isContentValid() {

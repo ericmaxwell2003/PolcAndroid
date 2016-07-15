@@ -1,13 +1,18 @@
-**Notes**
-* This is a quickly put together Android app to show the Path of Lowest Cost solver in action.  It is missing many things that I would add to a real app, including.
-** No tests, but I do have an example of tests that I've done for other apps, including this one https://github.com/ericmaxwell2003/roboguiceRealmNaeNae/tree/feature/roboguiceIntegration/app/src/androidTest/java/software/credible/naenaelistapp.  I used this example when I presented at CodeMash, Self Conference, and AnDevCon.
-** It works only well in portrait.
-** I haven't spent any time extracting styles from the main layout file into the styles file.
-** The UI is somewhat no frills.
+**Run Unit Tests and Build APK File**
+./gradlw clean build
 
-* What it does hopefully show is that I know Android and can whip up something simple in an hour or so.
+**Change Notes**
+* Made 1 Text area that is multi line.  (i.e. Enter 5..100 comma separated digits, then hit return for each subsequent row).
+* You can now enter up to 10 rows of data.
 
+**Examples**
+![Example One](Example%20One.png)
 
+![Example Two](Example%20Two.png)
+
+![Example Three](Example%20Three.png)
+
+["Example Three.png"]
 
 **Other Projects/Work I want to note are**
 

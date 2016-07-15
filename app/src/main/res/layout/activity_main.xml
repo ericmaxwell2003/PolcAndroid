@@ -30,42 +30,8 @@
         android:layout_marginEnd="@dimen/text_margin"
         android:orientation="vertical">
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/gridRow1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:textAlignment="center"
-            android:hint="3,4,1,2,8,6"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            android:autoText="false"
-            />
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/gridRow2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            />
-
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/gridRow3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            />
-
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/gridRow4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            />
-
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/gridRow5"
+        <EditText
+            android:id="@+id/grid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
